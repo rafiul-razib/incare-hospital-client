@@ -7,15 +7,16 @@ import { Link } from 'react-router-dom';
 
 const SingleService = (props) => {
     const service = props.service;
-    const{name, img, id} = service
+    const{name, img, id, details} = service
     return (
         <div className="col-md-4 col-sm-6 col-12 p-3">
             <div className="card h-100 service" style={{'width': '100%'}}>
             <img src={img} className="card-img-top" alt="..."/>
-            <div className="card-body">
+            <div className="card-body d-flex flex-column">
                 <h5 className="card-title animate__heartBeat">{name}</h5>
+                <p>You will need to be logged in to see further details</p>
                 <Link to= {`/service/${id}`}>
-                <button className="btn btn-info service-btn"><FontAwesomeIcon icon={faInfoCircle}/> See details</button>
+                <button className="btn btn-info mt-auto"><FontAwesomeIcon icon={faInfoCircle}/> See details</button>
                 </Link>
             </div>
             </div>
