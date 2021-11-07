@@ -21,24 +21,25 @@ const Header = () => {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav ms-2">
+                <div className="navbar-nav ms-1">
                     <HashLink className="nav-link active" aria-current="page" to="/home#top">Home</HashLink>
                     <HashLink className="nav-link" to="/home#about">About</HashLink>
                     <HashLink className="nav-link" to="/home#services">Services</HashLink>
                     <Link className="nav-link" to="/doctors">Our Doctors</Link>
+                    <Link className="nav-link" to="/success">Success story</Link>
                     <Link className="nav-link"to="/contact">Contact</Link>
 
                     {
                         !user.email?
                         <Link className="nav-link" to="/login">Login</Link>
                         :
-                        <button onClick={handleSignOut} className="btn btn-info">Logout</button>
+                        <button onClick={handleSignOut} className="btn btn-info p-1">Logout</button>
                         
                         
                     }  
 
 
-                    <span className="navbar-text ms-2 text-danger">
+                    <span className="navbar-text ms-3 text-danger">
                     {
                         user.displayName && <span>Signed in as {user.displayName}</span>
                     }
@@ -47,7 +48,7 @@ const Header = () => {
                     
                       
                 </div>
-                <div className="navbar-nav ms-auto px-1">
+                <div className="navbar-nav ms-auto px-0">
                 <Link to='/contact'>
                 <button className="btn btn-success rounded-pill btn-appointment">Make an appointment <FontAwesomeIcon icon={faCalendarAlt}/></button>
                 </Link>

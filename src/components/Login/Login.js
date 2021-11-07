@@ -5,7 +5,7 @@ import useAuth from '../hooks/useAuth';
 
 
 const Login = () => {
-    const{googleSignIn, handleSignInWithEmailAndPassword, setIsLoading} = useAuth();
+    const{googleSignIn, handleSignInWithEmailAndPassword, setIsLoading, isLoading} = useAuth();
     const[user, setUser] = useState('');
     const[password, setPassword] = useState('');
     const history = useHistory();
@@ -37,9 +37,16 @@ const Login = () => {
             history.push(redirect_uri)
             console.log(result.user)
         })
+        .catch(error =>{
+            console.log(error =>{
+                console.log(error.message)
+            })
+        })
         .finally(
             setIsLoading(false)
         )
+
+
         e.preventDefault()
         
     }
@@ -62,6 +69,7 @@ const Login = () => {
             <span>or</span>
             <button onClick={handleGoogleSignIn} className="btn btn-primary ms-2">Sign In with Google</button>
             </div>
+            
             </form>
         </div>
     );

@@ -13,6 +13,7 @@ import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import ErrorMessage from './components/ErrorMessage/ErrorMessage'
 import PrivateRoute from './components/Shared/PrivateRoute';
 import Doctors from './components/Doctors/Doctors';
+import SuccessStory from './components/SuccessStory/SuccessStory';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
        </Route>
        <Route path='/register'>
          <Register></Register>
+       </Route>
+       <Route path='/success'>
+        <SuccessStory></SuccessStory>
        </Route>
        <Route path='/doctors'>
         <Doctors></Doctors>

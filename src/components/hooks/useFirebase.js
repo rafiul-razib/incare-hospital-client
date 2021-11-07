@@ -22,10 +22,10 @@ const useFirebase =()=>{
     }
 
     const handleRegistrationWithEmailAndPassword = (email, password)=>{
-         createUserWithEmailAndPassword(auth, email, password)
-        .then(result =>{
-            console.log(result.user)
-        })
+         return createUserWithEmailAndPassword(auth, email, password)
+        // .then(result =>{
+        //     console.log(result.user)
+        // })
     }
 
     const handleSignInWithEmailAndPassword = (email, password)=>{
