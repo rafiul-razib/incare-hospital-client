@@ -1,0 +1,11 @@
+.service-heading:after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100px;
+    border-radius: 2px;
+    background: linear-gradient(140deg, #5a35ff 0%, #19ffec 100%);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

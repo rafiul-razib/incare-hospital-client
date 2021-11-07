@@ -5,7 +5,7 @@ import img2 from '../../images/Banner/mar-ko-pQ5hSOrkYgE-unsplash.jpg';
 
 const Banner = () => {
     return (
-        <div>
+        <div id="top">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">

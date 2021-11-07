@@ -4,7 +4,7 @@ import imgDoc from '../../images/About/bruno-rodrigues-279xIHymPYY-unsplash.jpg'
 
 const About = () => {
     return (
-        <div className="container">
+        <div className="container" id="about">
             <div className="row">
                 <div className="col-md-5">
                     <img src={imgDoc} className="img-fluid p-5" alt="" />
