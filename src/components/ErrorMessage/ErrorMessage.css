@@ -1,0 +1,6 @@
+.error-bg{
+    background-image: url('../../images//notFound/notFound.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+}

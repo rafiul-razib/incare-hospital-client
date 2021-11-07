@@ -22,7 +22,7 @@ const ServiceDetails = () => {
         }
     },[allService, id])
 
-    console.log(service)
+    
 
 
     return (

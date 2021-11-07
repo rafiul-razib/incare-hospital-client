@@ -1,4 +1,5 @@
 
+import { NotFound } from 'http-errors';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Contact from './components/Contact/Contact';
@@ -9,7 +10,9 @@ import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
+import ErrorMessage from './components/ErrorMessage/ErrorMessage'
 import PrivateRoute from './components/Shared/PrivateRoute';
+import Doctors from './components/Doctors/Doctors';
 
 function App() {
   return (
@@ -24,19 +27,24 @@ function App() {
        <Route exact path='/home'>
           <Home></Home>
        </Route>
-       <PrivateRoute path='/service/:id'>
-         <ServiceDetails></ServiceDetails>
-       </PrivateRoute>
-       <Route path='/contact'>
-         <Contact></Contact>
-       </Route>
        <Route path='/login'>
          <Login></Login>
+       </Route>
+       <Route path='/contact'>
+         <Contact></Contact>
        </Route>
        <Route path='/register'>
          <Register></Register>
        </Route>
-
+       <Route path='/doctors'>
+        <Doctors></Doctors>
+       </Route>
+       <PrivateRoute path='/service/:id'>
+         <ServiceDetails></ServiceDetails>
+       </PrivateRoute>
+       <Route path="/*">
+          <ErrorMessage></ErrorMessage>
+       </Route>
      </Switch>
       <Footer></Footer>
      </BrowserRouter>

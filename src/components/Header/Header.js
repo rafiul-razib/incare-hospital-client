@@ -25,14 +25,16 @@ const Header = () => {
                     <HashLink className="nav-link active" aria-current="page" to="/home#top">Home</HashLink>
                     <HashLink className="nav-link" to="/home#about">About</HashLink>
                     <HashLink className="nav-link" to="/home#services">Services</HashLink>
-                    <Link className="nav-link" to="/">Departments</Link>
+                    <Link className="nav-link" to="/doctors">Our Doctors</Link>
                     <Link className="nav-link"to="/contact">Contact</Link>
 
                     {
-                        user.email?
-                        <button onClick={handleSignOut} className="btn btn-info">Logout</button>
+                        !user.email?
+                        <Link className="nav-link" to="/login">Login</Link>
                         :
-                        <Link className="nav-link"to="/login">Login</Link>
+                        <button onClick={handleSignOut} className="btn btn-info">Logout</button>
+                        
+                        
                     }  
 
 

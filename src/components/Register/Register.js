@@ -4,7 +4,7 @@ import { useState } from 'react/cjs/react.development';
 import useAuth from '../hooks/useAuth';
 
 const Register = () => {
-    const {auth, handleRegistrationWithEmailAndPassword} = useAuth();
+    const {handleRegistrationWithEmailAndPassword} = useAuth();
     const[user, setUser] = useState('');
     const[password, setPassword]= useState('');
 
@@ -24,11 +24,6 @@ const Register = () => {
         <div>
             <div className="container">
             <form onSubmit={handleRegistration}>
-            {/* <div className="mb-3">
-                <label for="exampleInputEmail1" className="form-label">Name</label>
-                <input type="text" className="form-control" id="exampleInputName" aria-describedby="name"/>
-               
-            </div> */}
             <div className="mb-3">
                 <label for="exampleInputEmail1" className="form-label">Email address</label>
                 <input onBlur={handleEmail} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
@@ -42,7 +37,6 @@ const Register = () => {
             <p>Already signed up? <Link to='/login'>Login here!!</Link></p>
             <div className="d-flex">
             <button type="submit" className="btn btn-primary me-2">Sign up</button>
-            {/* <button type="submit" className="btn btn-primary ms-2">Sign In with Google</button> */}
             </div>
             </form>
         </div>

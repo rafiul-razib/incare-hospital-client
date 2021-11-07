@@ -9,6 +9,13 @@ https://i.ibb.co/YNvybjW/medicine-2.jpg
 https://i.ibb.co/sQHm6fv/surgery.jpg
 https://i.ibb.co/ZSPphS3/surgery2.jpg
 
+
+
+https://i.ibb.co/s55Tx0Y/ashkan-forouzani-DPEPYPBZp-B8-unsplash.jpg
+https://i.ibb.co/mtgf3qh/doctor-mako-p-Msyc-X4-AOKM-unsplash.jpg
+https://i.ibb.co/y0Y44yQ/jc-gellidon-UIp163x-CV6w-unsplash.jpg
+https://i.ibb.co/vsCpc0R/magdiel-lagos-7hjh-X3xs-DA-unsplash.jpg
+
 const services =[
     {
         id: 101,
@@ -50,4 +57,28 @@ const services =[
         details: 'We are working with the Clinton Health Access Initiative, U.S. Agency for International Development (USAID), USAID-Global Health Supply Chain, Medicines Patent Pool, and other product development partners with supply chain and procurement resources to ensure an efficient and effective handoff to procurers and manufacturers can occur, the projected savings are realized, and the savings are documented and tracked. M4ALL has been cultivating similar relationships with other organizations that may have the disease state-specific expertise and supply chain relationships to enable them to be effective partners for other non-HIV drugs. '
     }
    
+]
+
+
+const docs = [
+    {
+        id:1,
+        img: 'https://i.ibb.co/s55Tx0Y/ashkan-forouzani-DPEPYPBZp-B8-unsplash.jpg',
+        name: 'Dr. Ashkan Forouzani',
+    },
+    {
+        id:2,
+        img: 'https://i.ibb.co/mtgf3qh/doctor-mako-p-Msyc-X4-AOKM-unsplash.jpg',
+        name: 'Dr. Mako Synjhiya',
+    },
+    {
+        id:3,
+        img: 'https://i.ibb.co/y0Y44yQ/jc-gellidon-UIp163x-CV6w-unsplash.jpg',
+        name: 'Dr. Jc Gellidon',
+    },
+    {
+        id:4,
+        img: 'https://i.ibb.co/vsCpc0R/magdiel-lagos-7hjh-X3xs-DA-unsplash.jpg',
+        name: 'Dr. Magdel Lagos',
+    }
 ]
