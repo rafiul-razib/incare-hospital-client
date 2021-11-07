@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import SingleService from '../SingleService/SingleService';
+import SingleService from '../../SingleService/SingleService';
 import './Services.css';
 
 
@@ -10,7 +10,7 @@ const Services = () => {
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
-    // console.log(services)
+ 
     return (
         <div className="container my-5 text-center" id="services">
             <h2 className="service-heading">Our  Services</h2>

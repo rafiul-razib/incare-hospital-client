@@ -1,7 +1,7 @@
 import React from 'react';
-import img3 from '../../images/Banner/marcel-scholte-LPurJnihmQI-unsplash.jpg';
-import img1 from '../../images/Banner/national-cancer-institute-1c8sj2IO2I4-unsplash.jpg';
-import img2 from '../../images/Banner/mar-ko-pQ5hSOrkYgE-unsplash.jpg';
+import img3 from '../../../images/Banner/marcel-scholte-LPurJnihmQI-unsplash.jpg';
+import img1 from '../../../images/Banner/national-cancer-institute-1c8sj2IO2I4-unsplash.jpg';
+import img2 from '../../../images/Banner/mar-ko-pQ5hSOrkYgE-unsplash.jpg';
 
 const Banner = () => {
     return (

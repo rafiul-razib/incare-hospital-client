@@ -11,7 +11,7 @@ const Header = () => {
         <div className=" sticky-top">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/"><h1 className=" animate__heartBeat"><FontAwesomeIcon icon={faClinicMedical}/> Medi<span className="text-success">care</span></h1></a>
+                <a className="navbar-brand" href="/"><h1 className=" animate__heartBeat"><FontAwesomeIcon icon={faClinicMedical}/> In<span className="text-success">care </span>Health</h1></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>

@@ -1,5 +1,5 @@
 import React from 'react';
-import imgDoc from '../../images/About/bruno-rodrigues-279xIHymPYY-unsplash.jpg';
+import imgDoc from '../../../images/About/bruno-rodrigues-279xIHymPYY-unsplash.jpg';
 
 
 const About = () => {
@@ -10,8 +10,8 @@ const About = () => {
                     <img src={imgDoc} className="img-fluid p-5" alt="" />
                 </div>
                 <div className="col-md-7 p-5 text-end">
-                    <h2>About Medicare</h2>
-                    <p>Medicare Hospital is a 425-bed multidisciplinary super specialty tertiary care hospital which is the first and only hospital in Bangladesh to have got JCI Accredited. The Joint Commission International (JCI) is a U.S. based accreditation body dedicated to improving healthcare quality and safety around the world.</p>
+                    <h2>About Incare</h2>
+                    <p>Incare Hospital is a 425-bed multidisciplinary super specialty tertiary care hospital which is the first and only hospital in Bangladesh to have got JCI Accredited. The Joint Commission International (JCI) is a U.S. based accreditation body dedicated to improving healthcare quality and safety around the world.</p>
                     <div className="accordion" id="accordionExample">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
@@ -21,7 +21,7 @@ const About = () => {
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                    <p>Medicare Hospital and Specialist Centre not only places quality healthcare within reach, but provides patients and visitors with an enhanced hospital experience with its tastefully styled interiors. Upholding Singapore's reputation for delivering quality medical services, it has also been accredited by the Joint Commission International (JCI).</p>
+                    <p>Incare Hospital and Specialist Centre not only places quality healthcare within reach, but provides patients and visitors with an enhanced hospital experience with its tastefully styled interiors. Upholding Singapore's reputation for delivering quality medical services, it has also been accredited by the Joint Commission International (JCI).</p>
                     </div>
                     </div>
                 </div>

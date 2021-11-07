@@ -1,8 +1,7 @@
 import React from 'react';
-import About from '../About/About';
+import About from '../About/About'
 import Band from '../Band/Band';
 import Banner from '../Banner/Banner';
-import Footer from '../Footer/Footer';
 import Services from '../Services/Services';
 
 const Home = () => {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { HashLink } from 'react-router-hash-link';
 
 const ServiceDetails = () => {
     const{id} =useParams();
@@ -25,11 +26,14 @@ const ServiceDetails = () => {
 
 
     return (
-        <div class="card mb-3 w-50 mx-auto mt-5">
+        <div class="card mb-3 w-50 mx-auto mt-3">
         <img src={img} class="card-img-top" alt="..."/>
         <div class="card-body">
             <h5 class="card-title">{name}</h5>
             <p class="card-text">{details}</p>
+            <HashLink to="/home#services">
+                <button className="btn btn-primary">Back to Services</button>
+            </HashLink>
         </div>
         </div>
     );
