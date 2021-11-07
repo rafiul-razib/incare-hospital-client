@@ -1,24 +1,66 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import { useState } from 'react/cjs/react.development';
+import useAuth from '../hooks/useAuth';
+
 
 const Login = () => {
+    const{googleSignIn, handleSignInWithEmailAndPassword, setIsLoading} = useAuth();
+    const[user, setUser] = useState('');
+    const[password, setPassword] = useState('');
+    const history = useHistory();
+    const location = useLocation();
+
+    const redirect_uri = location.state?.from || '/home'
+
+    const handleGoogleSignIn = (e)=>{
+        googleSignIn()
+        .then(result =>{
+            history.push(redirect_uri)
+        })
+        .finally(
+            setIsLoading(false)
+        )
+        e.preventDefault()
+    }
+
+    const handleEmail = e =>{
+        setUser(e.target.value)
+    }
+    const handlePassword = e =>{
+        setPassword(e.target.value)
+    }
+
+    const signInWithEmail=(e)=>{
+        handleSignInWithEmailAndPassword(user, password)
+        .then(result =>{
+            history.push(redirect_uri)
+            console.log(result.user)
+        })
+        .finally(
+            setIsLoading(false)
+        )
+        e.preventDefault()
+        
+    }
     return (
         <div className="container">
-            <form>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <form onSubmit={signInWithEmail}>
+            <div className="mb-3">
+                <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+                <input onBlur={handleEmail} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
             </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1"/>
+            <div className="mb-3">
+                <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                <input onBlur={handlePassword} type="password" className="form-control" id="exampleInputPassword1"/>
             </div>
            
             <p>Need an account? <Link to='/register'>Register now!!</Link></p>
             <div className="d-flex">
-            <button type="submit" class="btn btn-primary me-2">Sign In</button>
-            <button type="submit" class="btn btn-primary ms-2">Sign In with Google</button>
+            <button type="submit" className="btn btn-primary me-2">Sign In</button>
+            <span>or</span>
+            <button onClick={handleGoogleSignIn} className="btn btn-primary ms-2">Sign In with Google</button>
             </div>
             </form>
         </div>

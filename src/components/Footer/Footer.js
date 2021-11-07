@@ -8,10 +8,10 @@ const Footer = () => {
 
                 <div className="col-md-2"></div>    
                     
-                <div class="col-md-2 col-12">
-                    <div class="card h-100 text-start border-0 bg-dark text-white">
-                    <div class="card-body">
-                    <h5 class="card-title">MEDICARE</h5>
+                <div className="col-md-2 col-12">
+                    <div className="card h-100 text-start border-0 bg-dark text-white">
+                    <div className="card-body">
+                    <h5 className="card-title">MEDICARE</h5>
                         <ul>
                             <li>Neurology</li>
                             <li>Ophthalmology</li>
@@ -24,9 +24,9 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div class="col-md-2 col-12">
-                    <div class="card h-100 text-start border-0 bg-dark text-white">
-                    <div class="card-body">
+                <div className="col-md-2 col-12">
+                    <div className="card h-100 text-start border-0 bg-dark text-white">
+                    <div className="card-body">
                     
                         <ul>
                             <li>X-ray</li>
@@ -40,10 +40,10 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div class="col-md-2 col-12">
-                    <div class="card h-100 text-start border-0 bg-dark text-white">
-                    <div class="card-body">
-                    <h5 class="card-title">LINKS</h5>
+                <div className="col-md-2 col-12">
+                    <div className="card h-100 text-start border-0 bg-dark text-white">
+                    <div className="card-body">
+                    <h5 className="card-title">LINKS</h5>
                         <ul>
                             <li>Blogs</li>
                             <li>Recent Innovations</li>
@@ -56,10 +56,10 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div class="col-md-4 col-12">
-                    <div class="card h-100 text-start border-0 bg-dark text-white">
-                    <div class="card-body">
-                    <h5 class="card-title">CONTACTS</h5>
+                <div className="col-md-4 col-12">
+                    <div className="card h-100 text-start border-0 bg-dark text-white">
+                    <div className="card-body">
+                    <h5 className="card-title">CONTACTS</h5>
                         <ul>
                             <li>Talk to the chairman</li>
                             <li>Emergency support</li>

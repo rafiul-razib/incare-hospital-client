@@ -5,8 +5,13 @@ import { faCalendarAlt, faClinicMedical} from '@fortawesome/free-solid-svg-icons
 import 'animate.css';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import useAuth from '../hooks/useAuth';
 
 const Header = () => {
+    const{user, logOut} = useAuth();
+    const handleSignOut = () =>{
+        logOut();
+    }
     return (
         <div className=" sticky-top">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,16 +21,31 @@ const Header = () => {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav ms-4">
+                <div className="navbar-nav ms-2">
                     <HashLink className="nav-link active" aria-current="page" to="/home#top">Home</HashLink>
                     <HashLink className="nav-link" to="/home#about">About</HashLink>
                     <HashLink className="nav-link" to="/home#services">Services</HashLink>
                     <Link className="nav-link" to="/">Departments</Link>
-                    {/* <Link className="nav-link" to="/blogs">Blogs</Link> */}
-                    <Link className="nav-link"to="/contact">Contact</Link>  
-                    <Link className="nav-link"to="/login">Login</Link>  
+                    <Link className="nav-link"to="/contact">Contact</Link>
+
+                    {
+                        user.email?
+                        <button onClick={handleSignOut} className="btn btn-info">Logout</button>
+                        :
+                        <Link className="nav-link"to="/login">Login</Link>
+                    }  
+
+
+                    <span className="navbar-text ms-2 text-danger">
+                    {
+                        user.displayName && <span>Signed in as {user.displayName}</span>
+                    }
+                    </span>
+
+                    
+                      
                 </div>
-                <div className="navbar-nav ms-auto px-5">
+                <div className="navbar-nav ms-auto px-1">
                 <Link to='/contact'>
                 <button className="btn btn-success rounded-pill btn-appointment">Make an appointment <FontAwesomeIcon icon={faCalendarAlt}/></button>
                 </Link>

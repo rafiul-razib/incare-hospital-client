@@ -26,11 +26,11 @@ const ServiceDetails = () => {
 
 
     return (
-        <div class="card mb-3 w-50 mx-auto mt-3">
-        <img src={img} class="card-img-top" alt="..."/>
-        <div class="card-body">
-            <h5 class="card-title">{name}</h5>
-            <p class="card-text">{details}</p>
+        <div className="card mb-3 w-50 mx-auto mt-3">
+        <img src={img} className="card-img-top" alt="..."/>
+        <div className="card-body">
+            <h5 className="card-title">{name}</h5>
+            <p className="card-text">{details}</p>
             <HashLink to="/home#services">
                 <button className="btn btn-primary">Back to Services</button>
             </HashLink>
