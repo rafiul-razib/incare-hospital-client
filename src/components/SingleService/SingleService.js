@@ -12,12 +12,17 @@ const SingleService = (props) => {
         <div className="col-md-4 col-sm-6 col-12 p-3">
             <div className="card h-100 service" style={{'width': '100%'}}>
             <img src={img} className="card-img-top" alt="..."/>
-            <div className="card-body d-flex flex-column">
+            <div className="card-body d-flex flex-column justify-content-between">
+                <div>
                 <h5 className="card-title animate__heartBeat">{name}</h5>
-                <p>You will need to be logged in to see further details</p>
+                <p>{details.slice(0,90)}...</p>
+                
+                </div>
+                <div>
                 <Link to= {`/service/${id}`}>
                 <button className="btn btn-info mt-auto"><FontAwesomeIcon icon={faInfoCircle}/> See details</button>
                 </Link>
+                </div>
             </div>
             </div>
         </div>

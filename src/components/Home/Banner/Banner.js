@@ -2,10 +2,11 @@ import React from 'react';
 import img3 from '../../../images/Banner/marcel-scholte-LPurJnihmQI-unsplash.jpg';
 import img1 from '../../../images/Banner/national-cancer-institute-1c8sj2IO2I4-unsplash.jpg';
 import img2 from '../../../images/Banner/mar-ko-pQ5hSOrkYgE-unsplash.jpg';
+import './Banner.css'
 
 const Banner = () => {
     return (
-        <div id="top">
+        <div id="top" className="top">
             <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active">

@@ -1,5 +1,4 @@
 
-import { NotFound } from 'http-errors';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Contact from './components/Contact/Contact';

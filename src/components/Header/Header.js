@@ -6,9 +6,11 @@ import 'animate.css';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../hooks/useAuth';
+import { useState } from 'react/cjs/react.development';
 
 const Header = () => {
     const{user, logOut} = useAuth();
+    const[expanded, setExpanded] = useState(false);
     const handleSignOut = () =>{
         logOut();
     }
